@@ -1,0 +1,32 @@
+#dashboard {
+  .dashboardpanel {
+    .sidebar {
+      @apply w-64 overflow-hidden fixed top-0 left-0 h-full text-white bg-background;
+      @include prefixer(transition, 0.4s ease-out);
+      &.close_sidebar {
+        left: -16rem;
+        @include prefixer(transition, 0.4s ease-out);
+      }
+    }
+    .content-area {
+      width: calc(100% - 16rem);
+      min-height: 100vh;
+      will-change: width;
+      float: right;
+      @include prefixer(transition, 0.4s ease-out);
+      .main-nav{
+        @apply leading-loose p-3 bg-background;
+        i {
+          @apply text-white p-3;
+        }
+      }
+      &.close_sidebar {
+        @apply w-full;
+        @include prefixer(transition, 0.4s ease-out);
+      }
+      .navegat {
+        @apply float-right relative bottom-9;
+      }
+    }
+  }
+}

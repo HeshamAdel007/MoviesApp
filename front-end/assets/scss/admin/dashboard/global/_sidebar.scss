@@ -1,0 +1,36 @@
+.dashboard-sidebar {
+  //- App Info
+  .brand {
+    @apply flex w-full h-16 mb-4 overflow-hidden bg-primary p-1;
+    .logo {
+      @apply relative w-12 h-12 top-025;
+      img {
+        @apply relative w-full h-full rounded-full;
+      }
+    }
+    .app-name {
+      width: calc(100% - 55px);
+      @apply flex relative left-6 leading-3;
+      span {
+        @apply text-white font-primary_font text-18 font-semibold;
+      }
+    }
+  }
+  //- Admin Info
+  .admin-info {
+    @apply flex mb-8 overflow-hidden p-1;
+    @include prefixer(border-bottom, 1px solid $third-color)
+    .img {
+      @apply relative w-16 h-16 top-025;
+      img {
+        @apply relative w-full h-full rounded-full;
+      }
+    }
+    .name {
+      @apply flex relative left-6 leading-4;
+      span {
+        @apply text-white font-primary_font text-16 font-semibold;
+      }
+    }
+  }
+}

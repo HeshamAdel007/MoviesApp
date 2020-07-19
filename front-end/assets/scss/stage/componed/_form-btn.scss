@@ -1,0 +1,39 @@
+.form-btn {
+  position: relative;
+  display: inline-block;
+  left: 1.75em;
+  right: 0;
+  padding: 15px;
+  margin: 1.65em 0;
+  background-color: $primary-color;
+  @include prefixer(border-radius, 6px);
+  @include prefixer(transition, 0.4s ease-out);
+  .btn {
+    color: $white-color;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    i {
+      margin-left: 10px;
+      -webkit-transition: width 1.5s, height 1.5s,
+        background-color 1.5s, transform 1.5s;
+      -moz-transition: width 1.5s, height 1.5s, background-color 1.5s,
+        transform 1.5s;
+      -o-transition: width 1.5s, height 1.5s, background-color 1.5s,
+        transform 1.5s;
+      transition: width 1.5s, height 1.5s, background-color 1.5s,
+        transform 1.5s;
+    }
+  }
+  &:hover {
+    background-color: $hover-color;
+    @include prefixer(box-shadow, 0 0 35px 0px $btn-shadow-color);
+    @include prefixer(transition, 0.4s ease-out);
+    .btn {
+      i {
+        @include prefixer(transform, scalex(1.8));
+      }
+    }
+  }
+}

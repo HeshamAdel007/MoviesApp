@@ -1,0 +1,54 @@
+.input-form {
+  input {
+    width: 100%;
+    height: 3em;
+    margin: 8px 0;
+    outline: none;
+    padding: 14px;
+    @include prefixer(border, 2px solid $input-color);
+    @include prefixer(border-radius, 10px);
+    @include prefixer(box-sizing,border-box);
+    @include prefixer(transition, 0.5s);
+    &:focus {
+      border-color: $primary-color;
+      @include prefixer(box-shadow, 0 0 8px 0 $primary-color);
+      @include prefixer(transition, 0.5s);
+    }
+  }
+  .inputIcon {
+    position: relative;
+    input {
+      padding-left: 3.2em;
+      &:focus + i {
+        color: $primary-color;
+        @include prefixer(transition, 0.5s);
+      }
+    }
+    i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: $input-color;
+      @include prefixer(transition, 0.5s);
+    }
+  }
+  .iconBg {
+    i {
+      background-color: $input-color;
+      color: $white-color;
+      padding: 16px 13px;
+      @include prefixer(border-radius, 4px 0 0 4px);
+    }
+  }
+  .inputIcon.iconBg input:focus + i {
+    color: $white-color;
+    background-color: $primary-color;
+    @include prefixer(transition, 0.5s);
+  }
+}
+span {
+  color: $primary-color;
+  font-size: 13px;
+  margin-left: 7px
+}

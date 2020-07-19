@@ -1,0 +1,54 @@
+//- Variables
+@import "../../stage/helped/variables";
+//- Mixin
+@import "../../stage/helped/mixins";
+//- Input Componed
+@import "../../stage/componed/form-input";
+//- Button Form
+@import "../../stage/componed/form-btn";
+
+.email-verify-page {
+   @apply w-full min-h-screen;
+  .overlay {
+    @apply absolute left-0 top-0 w-full h-full opacity-75 z-3 bg-overlay_color ;
+  }
+  img {
+    @apply absolute w-full h-full;
+  }
+  .container {
+    @apply w-full px-15 mx-auto;
+    .verify-container {
+      @apply relative flex items-center w-full min-h-screen;
+      .verify-body {
+        @apply w-full h-full overflow-hidden z-10;
+        .veriyfy-card {
+          @apply w-full h-full;
+          .veriyfy-head {
+            .title {
+              @apply text-primary font-primary_font text-32 font-semibold;
+            }
+          }
+          .veriyfy-info {
+            .veriyfy-check {
+              @apply z-10;
+              .spinner {
+                left: 47% !important;
+              }
+            }
+            .verify-msg {
+              .msg-content {
+                @apply text-white font-primary_font text-20 font-semibold;
+              }
+              @extend .input-form;
+              .input-container {
+                .form-btn {
+                  @apply left-0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

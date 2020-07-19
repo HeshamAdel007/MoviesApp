@@ -1,0 +1,35 @@
+//- Variables
+@import "../stage/helped/variables";
+//- Mixin
+@import "../stage/helped/mixins";
+
+.social-login-page {
+   @apply w-full min-h-screen;
+  .overlay {
+    @apply absolute left-0 top-0 w-full h-full opacity-75 z-3 bg-overlay_color;
+  }
+  img {
+    @apply absolute w-full h-full;
+  }
+  .container {
+    @apply w-full px-15 mx-auto;
+    .social-container {
+      @apply relative flex items-center w-full min-h-screen;
+      .social-body {
+        @apply w-full h-full z-10;
+        .social-card {
+          @apply w-full h-full;
+          .social-msg {
+            span {
+               @apply text-white font-primary_font text-25 tracking-wide font-semibold;
+            }
+          }
+          .spinner {
+            left: 46% !important;
+            top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
